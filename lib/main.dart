@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_provider/providers/fav_provider.dart';
-import 'package:practice_provider/screens/home_screen.dart';
+import 'package:practice_provider/providers/slider_provider.dart';
+import 'package:practice_provider/screens/slider_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -14,11 +15,12 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiProvider(
       providers: [
+        ChangeNotifierProvider(create: (_) => SliderProvider()),
         ChangeNotifierProvider(create: (context) => FavProvider()),
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: HomeScreen(),
+        home: SliderScreen(),
       ),
     );
   }
