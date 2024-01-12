@@ -14,8 +14,4 @@ class FavProvider extends ChangeNotifier {
     _favList.remove(index);
     notifyListeners();
   }
-
-  bool isFav(int index) {
-    return _favList.contains(index);
-  }
 }

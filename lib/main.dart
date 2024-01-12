@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_provider/providers/fav_provider.dart';
 import 'package:practice_provider/providers/slider_provider.dart';
-import 'package:practice_provider/screens/slider_screen.dart';
+import 'package:practice_provider/screens/home_screen.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
       ],
       child: const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: SliderScreen(),
+        home: HomeScreen(),
       ),
     );
   }

@@ -30,8 +30,11 @@ class _FavScreenState extends State<FavScreen> {
                         return Card(child:
                             Consumer(builder: (context, favProvider, child) {
                           return ListTile(
-                            title: Text('item${provider.isFav(index)}'),
+                            title: Text('item${provider.favList[index]}'),
                             trailing: const Icon(Icons.favorite),
+                            onTap: () {
+                              provider.removeFav(index);
+                            },
                           );
                         }));
                       }))
